@@ -18,6 +18,7 @@
   --social-links: #afb1b8;
   --bg-social-links: rgba(255, 255, 255, 0.1);
   --bg-customers: #f5f5f5;
+  --bg-overlay: #C4C4C4;
 }
 
 /* * {
@@ -165,6 +166,7 @@ header {
 /* section hero */
 
 .hero {
+  background-color: var(--bg-overlay);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -374,6 +376,8 @@ button {
 }
 
 .name-text {
+  margin-bottom: 16px;
+
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.19;
@@ -401,12 +405,16 @@ button {
   fill: var(--social-links);
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background: var(--accent-color);
+  
 }
 
-.social-link:hover svg {
+.social-link:hover svg,
+.social-link:focus svg {
   fill: var(--primary-white-color);
+  
 }
 
 .section-customers {
@@ -450,11 +458,13 @@ button {
   fill: var(--social-links);
 }
 
-.customers-link:hover {
-  border: 1px solid var(--accent-color);
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--accent-color);
 }
 
-.customers-link:hover svg {
+.customers-link:hover svg,
+.customers-link:focus svg {
   fill: var(--accent-color);
 }
 
@@ -513,14 +523,14 @@ button {
   width: calc((100% - 60px) / 3);
 }
 
-.examples-card:hover,
-.examples-card:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .examples-card a {
   display: block;
+}
+
+.examples-card a:hover,
+.examples-card a:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .examples-card .photo {
@@ -648,10 +658,12 @@ button {
   fill: var(--primary-white-color);
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background: var(--accent-color);
 }
 
-.social-link:hover svg {
+.social-link:hover svg,
+.social-link:focus svg {
   fill: var(--primary-white-color);
 }
